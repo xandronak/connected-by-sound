@@ -6,7 +6,7 @@
     "start": "next start",
     "prisma:migrate": "dotenv -e .env.local -- prisma migrate dev",
     "prisma:studio": "dotenv -e .env.local -- npx prisma studio",
-    "postinstall": "prisma migrate"
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "5.19.0",
