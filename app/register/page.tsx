@@ -7,12 +7,11 @@ import { Label } from "@/components/forms/label";
 import { FormMessage, Message } from "@/components/forms/form-message";
 import { encodedRedirect } from "@/utils/utils";
 
-export default function Signup({ searchParams }: { searchParams: Message }) {
+export default function Register({ searchParams }: { searchParams: Message }) {
   const signUp = async (formData: FormData) => {
     "use server";
     const email = formData.get("email")?.toString();
     const password = formData.get("password")?.toString();
-    const supabase = createClient();
     const origin = headers().get("origin");
 
     if (!email || !password) {
