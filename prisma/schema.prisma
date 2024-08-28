@@ -9,7 +9,37 @@ generator client {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id             Int     @id @default(autoincrement())
+  email          String  @unique
+  name           String?
+  spotifyAccount SpotifyAccount?
+  appleMusicAccount AppleMusicAccount?
+  deezerAccount  DeezerAccount?
+}
+
+model SpotifyAccount {
+  id           Int      @id @default(autoincrement())
+  accessToken  String   // Store access token for Spotify
+  refreshToken String?  // Optional refresh token if applicable
+  connectedAt  DateTime @default(now())
+  userId       Int      @unique
+  user         User     @relation(fields: [userId], references: [id])
+}
+
+model AppleMusicAccount {
+  id           Int      @id @default(autoincrement())
+  accessToken  String   // Store access token for Apple Music
+  refreshToken String?  // Optional refresh token if applicable
+  connectedAt  DateTime @default(now())
+  userId       Int      @unique
+  user         User     @relation(fields: [userId], references: [id])
+}
+
+model DeezerAccount {
+  id           Int      @id @default(autoincrement())
+  accessToken  String   // Store access token for Deezer
+  refreshToken String?  // Optional refresh token if applicable
+  connectedAt  DateTime @default(now())
+  userId       Int      @unique
+  user         User     @relation(fields: [userId], references: [id])
 }

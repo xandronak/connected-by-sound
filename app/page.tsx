@@ -1,24 +1,25 @@
-"use client"
-
-import { useTheme } from "next-themes"
-import Link from "next/link"
 import { Headphones, Users, PlayCircle } from "lucide-react"
 
+import LogoLink from "@/components/LogoLink";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import ConnectMusicPlatforms from "@/components/ConnectMusicPlatforms";
 
 export default function MainPage() {
-  const { setTheme } = useTheme();
-
   return (
     <>
+      <header className="w-full px-4 lg:px-6 h-14 flex items-center justify-between">
+        <LogoLink />
+        <ThemeSwitcher />
+      </header>
+
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black text-white">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 space-y-2">
           <div className="flex flex-col items-center space-y-20 text-center">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
@@ -28,15 +29,14 @@ export default function MainPage() {
                 Share your passion, discover new sounds, and join a community of music lovers.
               </p>
             </div>
-            <Button>
-              <Link href="/register">Join the platform</Link>
-            </Button>
+
+            <ConnectMusicPlatforms />
           </div>
         </div>
       </section>
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Key Features</h2>
+          <h2 className="text-3xl font-bold text-black tracking-tighter sm:text-5xl text-center mb-12">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card>
               <CardHeader>
