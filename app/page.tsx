@@ -1,14 +1,14 @@
 import { Headphones, Users, PlayCircle } from "lucide-react"
 
-import LogoLink from "@/components/LogoLink";
+import LogoLink from "@/components/logo-link";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import ThemeSwitcher from "@/components/ThemeSwitcher";
-import ConnectMusicPlatforms from "@/components/ConnectMusicPlatforms";
+import ThemeSwitcher from "@/components/theme-switcher";
+import { ConnectMusicPlatforms } from "@/components/connect-music-platforms";
 
 export default function MainPage() {
   return (

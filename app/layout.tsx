@@ -1,9 +1,7 @@
 import { ReactNode } from "react";
-import Link from "next/link"
-import { Music } from "lucide-react"
 import { GeistSans } from "geist/font/sans";
 
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
 
