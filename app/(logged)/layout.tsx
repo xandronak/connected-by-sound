@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 
-import LogoLink from "@/components/LogoLink"
+import LogoLink from "@/components/logo-link"
 
 export const metadata = {
   title: "Connected by Sound - Feed",
