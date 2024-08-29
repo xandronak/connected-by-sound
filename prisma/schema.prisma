@@ -18,10 +18,9 @@ model User {
 }
 
 enum MusicProviderName {
-  SPOTIFY
-  APPLE_MUSIC
-  YOUTUBE_MUSIC
-  DEEZER
+  spotify
+  appleMusic
+  deezer
 }
 
 model MusicProviderService {
